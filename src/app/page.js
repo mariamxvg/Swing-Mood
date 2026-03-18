@@ -162,7 +162,38 @@ export default function Home() {
   id="about"
   className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden bg-black text-white"
 >
-  ...
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#141414_0%,_#000_75%)]"></div>
+
+  <div className="absolute w-[900px] h-[900px] bg-[#C6A96B] opacity-15 blur-[240px] rounded-full top-[65%] left-1/2 -translate-x-1/2"></div>
+  <div className="absolute w-[600px] h-[600px] bg-[#C6A96B] opacity-10 blur-[200px] rounded-full top-[20%] left-1/2 -translate-x-1/2"></div>
+
+  <div className="relative z-10 w-full max-w-3xl flex flex-col items-center">
+
+    <motion.h2
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false, margin: "-100px" }}
+      className="text-5xl md:text-6xl tracking-[0.4em] mb-12"
+    >
+      ABOUT
+    </motion.h2>
+
+    <motion.p
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      viewport={{ once: false, margin: "-100px" }}
+      className="text-gray-300 text-lg md:text-xl leading-relaxed"
+    >
+      Swing Mood is built on the belief that every moment carries a feeling — and that feeling can be designed.
+      <br /><br />
+      We craft experiences where music, lighting, space, and energy come together to create something unforgettable.
+      <br /><br />
+      This is not just event planning. This is the art of atmosphere.
+    </motion.p>
+
+  </div>
 </section>
 
       {/* CONTACT */}
