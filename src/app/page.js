@@ -169,6 +169,37 @@ export default function Home() {
       {/* CONTACT */}
       <ContactSection />
 
+      {/* WHATSAPP BUTTON (ADDED BACK) */}
+      <a
+        href="https://wa.me/971545529189?text=Hi%20Swing%20Mood%2C%20I%20want%20to%20plan%20an%20event"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 z-50 group"
+      >
+        <div className="flex items-center gap-4">
+
+          <span className="opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-base tracking-widest text-[#C6A96B]">
+            CHAT WITH US
+          </span>
+
+          <div className="w-16 h-16 rounded-full border border-[#C6A96B] flex items-center justify-center backdrop-blur-md bg-black/60 transition-all duration-300
+            group-hover:bg-[#C6A96B]
+            shadow-[0_0_20px_rgba(198,169,107,0.15)]
+            group-hover:shadow-[0_0_30px_rgba(198,169,107,0.4)]
+          ">
+
+            <svg
+              viewBox="0 0 32 32"
+              className="w-7 h-7 text-[#C6A96B] group-hover:text-black transition"
+              fill="currentColor"
+            >
+              <path d="M16 .396C7.163.396 0 7.558 0 16.396c0 2.893.755 5.613 2.073 7.98L0 32l7.827-2.049A15.905 15.905 0 0 0 16 32c8.837 0 16-7.162 16-15.604C32 7.558 24.837.396 16 .396z"/>
+            </svg>
+
+          </div>
+        </div>
+      </a>
+
     </>
   );
 }
