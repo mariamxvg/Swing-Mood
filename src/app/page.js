@@ -132,7 +132,7 @@ export default function Home() {
 
   {/* BACKGROUND IMAGE */}
   <img 
-    src="/cinematic.jpg"
+    src="/cinematic.png"
     alt="Swing Mood Experience"
     className="absolute w-full h-full object-cover opacity-40"
   />
