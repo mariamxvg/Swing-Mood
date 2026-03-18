@@ -33,7 +33,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6"
+      className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 pb-24"
     >
       {/* TITLE */}
       <motion.h2
@@ -66,22 +66,22 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: false, margin: "-100px" }}
-          className="text-left space-y-8 text-gray-300 text-lg"
+          className="text-left space-y-6"
         >
-          <p>
-            <span className="text-white text-xl">Location:</span><br />
-            Abu Dhabi, UAE
-          </p>
+          <div>
+            <p className="text-gray-400 text-sm tracking-wide">Location</p>
+            <p className="text-lg font-light">Abu Dhabi, UAE</p>
+          </div>
 
-          <p>
-            <span className="text-white text-xl">Phone:</span><br />
-            +971 54 552 9189
-          </p>
+          <div>
+            <p className="text-gray-400 text-sm tracking-wide">Phone</p>
+            <p className="text-lg font-light">+971 54 552 9189</p>
+          </div>
 
-          <p>
-            <span className="text-white text-xl">Email:</span><br />
-            info@swingmood.ae
-          </p>
+          <div>
+            <p className="text-gray-400 text-sm tracking-wide">Email</p>
+            <p className="text-lg font-light">info@swingmood.ae</p>
+          </div>
         </motion.div>
 
         {/* FORM */}
@@ -124,7 +124,7 @@ export default function ContactSection() {
 
           <button
             type="submit"
-            className="mt-6 border border-[#C6A96B] text-[#C6A96B] py-4 text-lg tracking-[0.35em] hover:bg-[#C6A96B] hover:text-black transition-all duration-300"
+            className="mt-10 border border-[#C6A96B] text-[#C6A96B] py-4 text-lg tracking-[0.35em] hover:bg-[#C6A96B] hover:text-black transition-all duration-300"
           >
             SUBMIT
           </button>
