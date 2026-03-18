@@ -3,10 +3,11 @@
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import { useRef } from "react";
+import translations from "../../translations.js";
 
-export default function ContactSection() {
+export default function ContactSection({ lang }) {
   const form = useRef();
-
+const t = translations[lang];
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -19,10 +20,10 @@ export default function ContactSection() {
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          alert(t.success);
         },
         (error) => {
-          alert("Failed to send message.");
+          alert(t.error);
           console.log(error.text);
         }
       );
@@ -43,7 +44,7 @@ export default function ContactSection() {
         viewport={{ once: false, margin: "-100px" }}
         className="text-5xl md:text-6xl tracking-[0.4em] mb-6 text-center"
       >
-        CONTACT
+        {t.contact_title}
       </motion.h2>
 
       {/* SUBTEXT */}
@@ -54,7 +55,7 @@ export default function ContactSection() {
         viewport={{ once: false, margin: "-100px" }}
         className="text-gray-300 text-lg md:text-xl mb-16 text-center max-w-xl"
       >
-        Tell us your vision and we’ll bring it to life.
+        {t.contact_desc}
       </motion.p>
 
       {/* CONTENT */}
@@ -69,17 +70,17 @@ export default function ContactSection() {
           className="text-left space-y-6"
         >
           <div>
-            <p className="text-gray-400 text-sm tracking-wide">Location</p>
+            <p className="text-gray-400 text-sm tracking-wide">{t.location}</p>
             <p className="text-lg font-light">Abu Dhabi, UAE</p>
           </div>
 
           <div>
-            <p className="text-gray-400 text-sm tracking-wide">Phone</p>
+            <p className="text-gray-400 text-sm tracking-wide">{t.phone}</p>
             <p className="text-lg font-light">+971 54 552 9189</p>
           </div>
 
           <div>
-            <p className="text-gray-400 text-sm tracking-wide">Email</p>
+            <p className="text-gray-400 text-sm tracking-wide">{t.email}</p>
             <p className="text-lg font-light">info@swingmood.ae</p>
           </div>
         </motion.div>
@@ -96,27 +97,27 @@ export default function ContactSection() {
         >
           <input
             name="from_name"
-            placeholder="Name"
+            placeholder={t.name}
             required
             className="bg-transparent border-b border-white/20 py-4 text-lg outline-none focus:border-[#C6A96B] transition"
           />
 
           <input
             name="from_email"
-            placeholder="Email"
+            placeholder={t.email_input}
             required
             className="bg-transparent border-b border-white/20 py-4 text-lg outline-none focus:border-[#C6A96B] transition"
           />
 
           <input
             name="event_type"
-            placeholder="Type of Event"
+            placeholder={t.event_type}
             className="bg-transparent border-b border-white/20 py-4 text-lg outline-none focus:border-[#C6A96B] transition"
           />
 
           <textarea
             name="message"
-            placeholder="Tell us about your vision..."
+            placeholder={t.message}
             rows="4"
             required
             className="bg-transparent border-b border-white/20 py-4 text-lg outline-none focus:border-[#C6A96B] resize-none transition"
@@ -126,7 +127,7 @@ export default function ContactSection() {
             type="submit"
             className="mt-10 border border-[#C6A96B] text-[#C6A96B] py-4 text-lg tracking-[0.35em] hover:bg-[#C6A96B] hover:text-black transition-all duration-300"
           >
-            SUBMIT
+            {t.submit}
           </button>
         </motion.form>
 
