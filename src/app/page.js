@@ -127,6 +127,33 @@ export default function Home() {
         </div>
       </section>
 
+{/* CINEMATIC SECTION */}
+<section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+
+  {/* BACKGROUND IMAGE */}
+  <img 
+    src="/cinematic.jpg"
+    alt="Swing Mood Experience"
+    className="absolute w-full h-full object-cover opacity-40"
+  />
+
+  {/* DARK OVERLAY */}
+  <div className="absolute inset-0 bg-black/70"></div>
+
+  {/* GOLD GLOW (subtle) */}
+  <div className="absolute w-[500px] h-[500px] bg-[#C6A96B] opacity-5 blur-[180px] rounded-full"></div>
+
+  {/* TEXT */}
+  <div className="relative z-10 text-center px-6">
+    <h2 className="text-3xl md:text-5xl tracking-[0.4em] text-white leading-relaxed">
+      WHERE MUSIC SPEAKS  
+      <br />
+      SILENCE LISTENS
+    </h2>
+  </div>
+
+</section>
+
       {/* ABOUT */}
       <section
         id="about"
