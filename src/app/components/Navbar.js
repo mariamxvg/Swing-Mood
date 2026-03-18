@@ -41,13 +41,17 @@ export default function Navbar() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="flex justify-center gap-16 text-sm md:text-base tracking-[0.4em]">
+      {/* 🔥 SCROLLABLE NAV CONTAINER */}
+      <div
+        className="flex justify-start md:justify-center gap-10 md:gap-16 text-sm md:text-base tracking-[0.4em] overflow-x-auto whitespace-nowrap px-4 scrollbar-hide"
+        style={{ scrollBehavior: "smooth" }}
+      >
 
         {navItems.map((item) => (
           <a
             key={item}
             href={`#${item}`}
-            className={`relative group transition-all duration-300 ${
+            className={`relative group transition-all duration-300 flex-shrink-0 ${
               active === item
                 ? "text-[#C6A96B]"
                 : "text-white/70 hover:text-white"
