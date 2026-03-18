@@ -130,27 +130,36 @@ export default function Home() {
 {/* CINEMATIC SECTION */}
 <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
 
-  {/* BACKGROUND IMAGE */}
-  <img 
+  {/* CINEMATIC BACKGROUND (ZOOM EFFECT) */}
+  <motion.img 
     src="/cinematic.png"
     alt="Swing Mood Experience"
-    className="absolute w-full h-full object-cover opacity-40"
+    initial={{ scale: 1 }}
+    whileInView={{ scale: 1.1 }}
+    transition={{ duration: 12, ease: "easeOut" }}
+    className="absolute w-full h-full object-cover opacity-60"
   />
 
   {/* DARK OVERLAY */}
   <div className="absolute inset-0 bg-black/70"></div>
 
-  {/* GOLD GLOW (subtle) */}
+  {/* SUBTLE GOLD GLOW */}
   <div className="absolute w-[500px] h-[500px] bg-[#C6A96B] opacity-5 blur-[180px] rounded-full"></div>
 
-  {/* TEXT */}
-  <div className="relative z-10 text-center px-6">
+  {/* TEXT (ANIMATED) */}
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.2, ease: "easeOut" }}
+    viewport={{ once: false }}
+    className="relative z-10 text-center px-6"
+  >
     <h2 className="text-3xl md:text-5xl tracking-[0.4em] text-white leading-relaxed">
-      WHERE MUSIC SPEAKS  
+      WE DON’T PLAN EVENTS  
       <br />
-      SILENCE LISTENS
+      WE DESIGN EXPERIENCES
     </h2>
-  </div>
+  </motion.div>
 
 </section>
 
